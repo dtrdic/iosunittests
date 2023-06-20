@@ -28,12 +28,19 @@ workflows:
           cd $CM_BUILD_DIR
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_ID")
           agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
-      - name: Unit Test
+      # - name: Unit Test
+      #   script: |
+      #     xcode-project run-tests -v \
+      #     --workspace $XCODE_WORKSPACE \
+      #     --scheme "$XCODE_SCHEME" \
+      #     --device "iPhone 14" 
+      - name : Unit tests with xcodebuild
         script: |
-          xcode-project run-tests -v \
-          --workspace $XCODE_WORKSPACE \
-          --scheme "$XCODE_SCHEME" \
-          --device "iPhone 14"    
+          xcodebuild build test \
+          -workspace "$XCODE_WORKSPACE" \
+          -scheme "$XCODE_SCHEME" \
+          -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2' \
       - name: Build ipa for distribution
         script: | 
           xcode-project build-ipa \
