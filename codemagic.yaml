@@ -44,7 +44,7 @@ workflows:
           CODE_SIGNING_REQUIRED=YES \
           CODE_SIGNING_ALLOWED=YES \
           DEVELOPMENT_TEAM="X8NNQ9CYL2" \
-          CODE_SIGN_IDENTITY="iPhone Developer" \
+          CODE_SIGN_IDENTITY="iPhone Distribution" \
       - name: Build ipa for distribution
         script: | 
           xcode-project build-ipa \
