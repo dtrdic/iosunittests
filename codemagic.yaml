@@ -24,6 +24,7 @@ workflows:
           rbenv install 3.0.5
           export RBENV_VERSION=3.0.5
           ruby --version
+          rbenv global 3.0.5
       - name: Install CocoaPods dependencies
         script: | 
           pod install
