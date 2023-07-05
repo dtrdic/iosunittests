@@ -7,7 +7,6 @@ workflows:
     integrations:
       app_store_connect: Himesh APNS
     environment:
-      ruby: 3.0.5
       ios_signing:
         distribution_type: app_store
         bundle_identifier: ioshimeshunittests.nevercode.io.iOSUnitTests
@@ -19,6 +18,12 @@ workflows:
       xcode: 14.2
       cocoapods: default
     scripts:
+      - name: install ruby 3.0.5
+        script: 
+          ruby --version
+          rbenv install 3.0.5
+          export RBENV_VERSION=3.0.5
+          ruby --version
       - name: Install CocoaPods dependencies
         script: | 
           pod install
