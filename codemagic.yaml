@@ -19,7 +19,7 @@ workflows:
       cocoapods: default
     scripts:
       - name: install ruby 3.0.5
-        script: 
+        script: |
           ruby --version
           rbenv install 3.0.5
           export RBENV_VERSION=3.0.5
