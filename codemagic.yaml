@@ -48,12 +48,10 @@ workflows:
           -scheme "$XCODE_SCHEME" \
           -sdk iphonesimulator \
           -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2' \
-          -exportOptionsPlist /Users/builder/export_options.plist \
-          -exportArchive \
-          CODE_SIGNING_REQUIRED=YES \
-          CODE_SIGNING_ALLOWED=YES \
-          DEVELOPMENT_TEAM="X8NNQ9CYL2" \
-          CODE_SIGN_IDENTITY="iPhone Distribution" \
+          -configuration Debug \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO 
       - name: Build ipa for distribution
         script: | 
           xcode-project build-ipa \
