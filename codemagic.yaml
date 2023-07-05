@@ -7,6 +7,7 @@ workflows:
     integrations:
       app_store_connect: Himesh APNS
     environment:
+      ruby: 3.0.4p208
       ios_signing:
         distribution_type: app_store
         bundle_identifier: ioshimeshunittests.nevercode.io.iOSUnitTests
