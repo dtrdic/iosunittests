@@ -14,8 +14,9 @@
 		1B0E64162A41C9E800379D13 /* iOSUnitTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E64152A41C9E800379D13 /* iOSUnitTestsTests.swift */; };
 		1B0E64202A41C9E800379D13 /* iOSUnitTestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E641F2A41C9E800379D13 /* iOSUnitTestsUITests.swift */; };
 		1B0E64222A41C9E800379D13 /* iOSUnitTestsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E64212A41C9E800379D13 /* iOSUnitTestsUITestsLaunchTests.swift */; };
+		1B66DF652A558A7900D9F7FF /* Pods_iOSUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F9CACF540E3AEB4774FEE6 /* Pods_iOSUnitTests.framework */; };
+		1B66DF662A558A7900D9F7FF /* Pods_iOSUnitTests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31F9CACF540E3AEB4774FEE6 /* Pods_iOSUnitTests.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2D9A8151B89998FBE030129D /* Pods_iOSUnitTestsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8564D602BDECEFFD184763D /* Pods_iOSUnitTestsTests.framework */; };
-		84183CB73E6ED7FD04BB1A8F /* Pods_iOSUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F9CACF540E3AEB4774FEE6 /* Pods_iOSUnitTests.framework */; };
 		CC8B5C0E78DA534D9792EF0B /* Pods_iOSUnitTests_iOSUnitTestsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E948D99D173918A76BE5CD93 /* Pods_iOSUnitTests_iOSUnitTestsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,20 @@
 			remoteInfo = iOSUnitTests;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B66DF672A558A7900D9F7FF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1B66DF662A558A7900D9F7FF /* Pods_iOSUnitTests.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		095CEA25FF6AE31EA25B99F9 /* Pods-iOSUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSUnitTests/Pods-iOSUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84183CB73E6ED7FD04BB1A8F /* Pods_iOSUnitTests.framework in Frameworks */,
+				1B66DF652A558A7900D9F7FF /* Pods_iOSUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +111,6 @@
 				5F41E7C16FE1C10300D1FD9D /* Pods-iOSUnitTestsTests.debug.xcconfig */,
 				5C56454D4069CBED372F7E8C /* Pods-iOSUnitTestsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -179,6 +193,7 @@
 				1B0E63FD2A41C9E600379D13 /* Sources */,
 				1B0E63FE2A41C9E600379D13 /* Frameworks */,
 				1B0E63FF2A41C9E600379D13 /* Resources */,
+				1B66DF672A558A7900D9F7FF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
