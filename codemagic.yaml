@@ -15,7 +15,7 @@ workflows:
         XCODE_WORKSPACE: "iOSUnitTests.xcworkspace" # <-- Put the name of your Xcode workspace here
         XCODE_SCHEME: "iOSUnitTests" # <-- Put the name of your Xcode scheme here
         APP_ID: 6450458297
-      xcode: 14.3.1
+      xcode: edge
       cocoapods: default
     scripts:
       # - name: install ruby 3.0.5
