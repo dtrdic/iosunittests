@@ -49,6 +49,7 @@ workflows:
           -sdk iphonesimulator \
           -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2' \
           -exportOptionsPlist /Users/builder/export_options.plist \
+          -exportArchive \
           CODE_SIGNING_REQUIRED=YES \
           CODE_SIGNING_ALLOWED=YES \
           DEVELOPMENT_TEAM="X8NNQ9CYL2" \
