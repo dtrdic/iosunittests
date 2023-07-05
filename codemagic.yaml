@@ -43,7 +43,7 @@ workflows:
       #     --device "iPhone 14" 
       - name : Unit tests with xcodebuild
         script: |
-          xcodebuild build test \
+          xcodebuild test \
           -workspace "$XCODE_WORKSPACE" \
           -scheme "$XCODE_SCHEME" \
           -sdk iphonesimulator \
