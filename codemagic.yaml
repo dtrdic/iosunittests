@@ -43,15 +43,23 @@ workflows:
       #     --device "iPhone 14" 
       - name : Unit tests with xcodebuild
         script: |
-          xcodebuild test \
-          -workspace "$XCODE_WORKSPACE" \
-          -scheme "$XCODE_SCHEME" \
-          -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2' \
-          -configuration Debug \
+          xcode-project run-tests -v \
+          --workspace $XCODE_WORKSPACE \
+          --scheme "$XCODE_SCHEME" \
+          --device "iPhone 14"
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO 
+          
+          # xcodebuild test \
+          # -workspace "$XCODE_WORKSPACE" \
+          # -scheme "$XCODE_SCHEME" \
+          # -sdk iphonesimulator \
+          # -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2' \
+          # -configuration Debug \
+          # CODE_SIGN_IDENTITY="" \
+          # CODE_SIGNING_REQUIRED=NO \
+          # CODE_SIGNING_ALLOWED=NO 
       - name: Build ipa for distribution
         script: | 
           xcode-project build-ipa \
