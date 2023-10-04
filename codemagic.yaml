@@ -14,7 +14,7 @@ workflows:
         XCODE_WORKSPACE: "iOSUnitTests.xcworkspace" # <-- Put the name of your Xcode workspace here
         XCODE_SCHEME: "iOSUnitTests" # <-- Put the name of your Xcode scheme here
         APP_ID: 6450458297
-      xcode: 14.3
+      xcode: 15.0
       cocoapods: default
     scripts:
       # - name: install ruby 3.0.5
@@ -45,7 +45,7 @@ workflows:
           xcode-project run-tests -v \
           --workspace $XCODE_WORKSPACE \
           --scheme "$XCODE_SCHEME" \
-          --device "iPhone 14"
+          --device "iPhone 15"
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO 
@@ -54,7 +54,7 @@ workflows:
           # -workspace "$XCODE_WORKSPACE" \
           # -scheme "$XCODE_SCHEME" \
           # -sdk iphonesimulator \
-          # -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2' \
+          # -destination 'platform=iOS Simulator,name=iPhone 1 Pro,OS=16.2' \
           # -configuration Debug \
           # CODE_SIGN_IDENTITY="" \
           # CODE_SIGNING_REQUIRED=NO \
