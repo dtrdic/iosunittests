@@ -45,7 +45,7 @@ workflows:
           xcode-project run-tests -v \
           --workspace $XCODE_WORKSPACE \
           --scheme "$XCODE_SCHEME" \
-          --device "iPhone 15"
+          --device "iPhone 13 Pro"
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO 
