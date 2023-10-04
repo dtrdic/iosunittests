@@ -32,7 +32,8 @@ final class iOSUnitTestsTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-        func testExample() throws {
+    
+    func testExample() throws {
         XCTAssertEqual(1 + 1, 2)
     }
 
